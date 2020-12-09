@@ -28,7 +28,7 @@ const mobileNum = document.querySelector('#number');
 const pwd = document.querySelector('#pwd');
     const pwdError = document.querySelector('.pwd-error');
     pwd.addEventListener('input', function() {
-        const pwdRegex = /^[a-zA-Z]{8,}$/;
+        const pwdRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
         if (pwdRegex.test(pwd.value))
             pwdError.textContent = "";
         else pwdError.textContent = "Password is Incorrect ";
