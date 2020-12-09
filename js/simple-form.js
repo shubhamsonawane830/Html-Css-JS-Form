@@ -16,6 +16,15 @@ const email = document.querySelector('#email');
         else emailError.textContent = "Email is Incorrect ";
     });
 
+const mobileNum = document.querySelector('#number');
+    const mobileNumError = document.querySelector('.number-error');
+    mobileNum.addEventListener('input', function() {
+        const mobileNumRegex = /^[6-9]{1}[0-9]{9}$/;
+        if (mobileNumRegex.test(mobileNum.value))
+            mobileNumError.textContent = "";
+        else mobileNumError.textContent = "Mobile number is Incorrect ";
+    });
+
 const salary = document.querySelector('#salary');
 const output = document.querySelector('.salary-output');
 output.textContent = salary.value;
