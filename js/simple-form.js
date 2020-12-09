@@ -25,6 +25,15 @@ const mobileNum = document.querySelector('#number');
         else mobileNumError.textContent = "Mobile number is Incorrect ";
     });
 
+const pwd = document.querySelector('#pwd');
+    const pwdError = document.querySelector('.pwd-error');
+    pwd.addEventListener('input', function() {
+        const pwdRegex = /^[a-zA-Z]{8,}$/;
+        if (pwdRegex.test(pwd.value))
+            pwdError.textContent = "";
+        else pwdError.textContent = "Password is Incorrect ";
+    });
+
 const salary = document.querySelector('#salary');
 const output = document.querySelector('.salary-output');
 output.textContent = salary.value;
